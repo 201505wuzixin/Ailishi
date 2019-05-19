@@ -1,0 +1,24 @@
+page-person {
+    #title{
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        background: url(../assets/imgs/wallpaper.jpeg)
+    }
+    #title img{
+        margin-top: 50px;
+        width: 25%;
+        border-radius: 50%;
+    }
+    #data{
+        text-align: center;
+    }
+    .set{
+        font-size:18px;
+        color:balck;
+    }
+    .setname{
+        font-size:15px!important;
+    }
+
+}

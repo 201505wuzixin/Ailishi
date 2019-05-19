@@ -1,0 +1,40 @@
+<!--
+  Generated template for the MapPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="zhijia">
+      <ion-title>地图</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content class="con">
+      <form action="javascript:return true;" class="seach">
+          <ion-row >
+            <ion-input mode="ios" [(ngModel)]="search" type="search"  placeholder="  请搜索" [ngModelOptions]="{standalone: true}"></ion-input>
+            <div style="height: 30px;width: 30px;float: right;margin-right: 5px " (click)="searchBt()">
+              <ion-icon ios="ios-search" md="md-search" class="icon"></ion-icon>
+            </div>
+          </ion-row>
+        </form>
+    <div #map id="map_container"></div>
+    <div id="btn_location">
+    <!-- <button ion-button  class="btn_loaction">浏览器定位</button> -->
+    <!-- <button ion-button  class="btn_loaction" (click)="getLocationByIp()">IP定位</button> -->
+    <button ion-button  class="btn_loaction" (click)="getLocationByCity()">城市定位</button>
+    <!-- <button ion-button  class="btn_loaction" (click)="getLocationByLatLon()">经纬度定位</button>
+    <button ion-button  class="btn_loaction" (click)="getLocation()">GPS点击定位</button> -->
+  </div>
+  <div id="tuijian">
+    <li class="zhanshi" *ngFor="let item of infolist">
+        <img class="info-imgs" src="{{item.imgsURL}}" (click)="goPay()">
+        <h3>{{item.jdname}}</h3>
+        <p>{{item.jdcon}}</p>
+    </li>
+  </div>
+  </ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="zhijia">
+    <ion-title>编辑个人信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<div id="title">
+  <img src="assets/imgs/user.jpg" alt="">
+</div>
+<div id="data">
+  <p>···编辑资料···</p>
+</div>
+<div class="list">
+  <ion-item>
+    <ion-label class="setname" stacked>昵称:</ion-label>
+    <ion-input #nickname type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="setname" stacked>邮箱:</ion-label>
+    <ion-input #email type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="setname" stacked>生日:</ion-label>
+    <ion-datetime displayFormat="YYYY MMM DD" #birth></ion-datetime>
+  </ion-item>
+</div>
+
+<button ion-button full round color="zhijia" (click)="setting(nickname,email,birth)" class="btn">提交修改</button>
+</ion-content>

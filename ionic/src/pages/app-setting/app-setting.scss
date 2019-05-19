@@ -1,0 +1,27 @@
+page-app-setting {
+    .my_setting{
+        background-color: #eee;
+    }
+    .login_out button{
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    ion-list button{
+        background-color: #fff;
+    }
+    ion-list{
+        .item-ios{
+            padding-left:0;  
+        }
+        .item-inner{
+            padding-left: 16px;
+        }
+    }
+    .logout{
+        text-align: center;
+        button{
+            width: 200px;
+        }
+    }
+}

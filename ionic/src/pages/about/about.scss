@@ -1,0 +1,22 @@
+page-about {
+    .content-ios{
+        background: #eee;
+    }
+    ion-card{ 
+        .item-ios{
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .card-ios{
+        box-shadow: none;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+    .main_img{
+        height: 150px;
+        width: 300px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,123 @@
+page-home {
+    *{
+        padding:0;
+        margin:0;
+    }
+    ion-header{
+        color:#ffff;
+    }
+    .title{
+        width:400px;
+    }
+    .btn{
+        float:left;
+    }
+    ion-navbar ion-icon{
+        float:right;
+        padding-right:5%; 
+    }
+    ion-slides,ion-slide{
+        height:auto; 
+    }
+    .button_item2 a{
+        text-decoration:none; 
+    }
+    .button_item1{
+        width:100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .button_item1 li{
+        display: inline;
+        padding: 10px;
+    }
+    .button_item1 li img{
+        height:63px;
+    }
+    .button_item2{
+        width:100%;
+        margin: 0 auto;
+        padding-top: 12px;
+        text-align: center;
+        
+    }
+    .button_item2 li{
+        display: inline;
+        padding: 10px;
+    }
+    .button_item2 li img{
+        height:63px;
+    }
+    //轮播图
+    #slider{
+        height:200px;
+        width:100%;
+    }
+    //类型选择栏
+    $slide-height-small: 4.2rem;
+    $slide-height-large: 4.2rem;
+
+    .slide-title {
+    width: 100%;
+    height: $slide-height-small;
+    background-color: map_get($colors,zhijia);
+    padding: 0;
+    border-bottom:2px solid map_get($colors, light);
+    }
+
+    .slide-title-unit {
+    padding-bottom: 0.6rem;
+    font-size: 1.6rem;
+    color: white;
+    height: $slide-height-small;
+    line-height: $slide-height-small;
+    }
+
+    .slide-title-active {
+    border-bottom: 3px solid yellow;
+    color: yellow;
+    }
+    #buttons{
+        padding-top: 15px;
+    }
+    #active-title{
+        text-align: center;
+        padding: 10px;
+        margin-top: 15px;
+        background: #ffbb00;
+    }
+    //展示
+    .info-imgs{
+        float:left;
+        width:48%;
+        height:150px;
+        margin:1%;
+        border:1px solid rgb(224, 149, 111);
+    }
+    .zhanshi{
+        list-style:none;
+    }
+    // 海报
+    .card-background-page {
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+        .card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 52%;
+          width: 100%;
+          color: #fff;
+        }
+      
+      }
+}

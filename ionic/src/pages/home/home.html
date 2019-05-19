@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="zhijia">
+    <ion-title class="title">
+      <!-- <ion-icon name="pin" (click)="goMap()" class="btn"></ion-icon>
+      <p>当前位置:{{cityname}}</p> -->
+      首页
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- 下拉刷新 -->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新..." refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher>
+      <!-- 轮播图 -->
+    <ion-slides autoplay="2000" centeredSlides="true" loop="true" id="slider">
+      <ion-slide>
+        <img src="assets/imgs/jingdian1.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/jingdian2.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/jingdian3.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+    <!-- 类型选择栏 -->
+    <ion-slides class="slide-title" [slidesPerView]="pageNumber" [pager]="false">
+      <ion-slide *ngFor="let slide of slides; let i = index;">
+        <div (click)="onClick(i,slide)">
+          <span class="slide-title-unit" [ngClass]="{'slide-title-active': selectedIndex == i}">{{slide}}</span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  <!-- 景点内容 -->
+<div id="tuijian">
+    <li class="zhanshi" *ngFor="let item of infolist">
+        <img class="info-imgs" src="{{item.imgsURL}}" (click)="goCon()">
+    </li>
+</div>
+<!-- 上拉加载 -->
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

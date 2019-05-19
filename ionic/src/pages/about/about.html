@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color=zhijia>
+    <ion-title>
+      通知
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of info;let id = index;" class="animated fadeIn" (click)="main(id)">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/about/wuye.jpg">
+      </ion-avatar>
+      <h2>神兴小区物业</h2>
+      <p>{{item.created}}</p>
+    </ion-item>
+    <img class="main_img" src="assets/imgs/info.png">
+    <ion-card-content>
+      <p>{{item.title}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

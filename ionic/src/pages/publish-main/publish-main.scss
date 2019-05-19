@@ -1,0 +1,56 @@
+page-publish-main {
+    ion-content{
+        background-color: #eee!important;
+        .card-ios{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            box-shadow: none;
+            margin-top: 0; 
+            margin-bottom: 5px;
+        }
+        ion-card{
+            .main_img{
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            ion-avatar{
+                img{
+                    height: 44px!important;
+                    width: 44px!important;
+                }
+            }
+            ion-item{
+                h2{
+                    width: 50%;
+                    display: inline;
+                }
+                p{
+                    width: 35%;
+                    display: inline;
+                    float: right;
+                    text-align: right;
+                }
+            }
+        }
+        
+        .segment-ios-whi .segment-button{
+            color:#aaa;
+            border: none;
+        }
+    }
+    ion-footer{
+        ion-buttons{
+            text-align: center;
+            ion-icon{
+                font-size: 24px;
+            }
+        }
+        ion-toolbar{
+            ion-grid{
+                padding: 0!important;
+            }
+        }
+        
+    }
+}
